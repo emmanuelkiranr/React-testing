@@ -10,7 +10,7 @@ class Availablestaff extends Component {
         count="45"
         label="Available staff"
         icon="https://anima-uploads.s3.amazonaws.com/projects/60bf00c71e213cd0a7db8f74/img/card-icon@2x.svg"
-        pillValue="+1.01%"
+        pillValue="+7.77%"
         percentageArrow="https://anima-uploads.s3.amazonaws.com/projects/60bf00c71e213cd0a7db8f74/img/polygon-1-2@2x.svg"
       />
     );
