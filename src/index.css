@@ -1,13 +1,217 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.base-card-component {
+  align-items: flex-start;
+  display: flex;
+  height: 156px;
+  left: 0;
+  min-width: 250px;
+  mix-blend-mode: hard-light;
+  position: absolute;
+  top: 0;
+}
+
+/* position card on screen */
+.patient-count-overlap {
+  height: 156px;
+  margin-top: 74px;
+  position: relative;
+  width: 250px;
+}
+
+.appointments-overlap {
+  height: 156px;
+  margin-top: 14px;
+  position: relative;
+  width: 250px;
+}
+
+.availablestaff-overlap {
+  height: 156px;
+  margin-top: 14px;
+  position: relative;
+  width: 250px;
+}
+
+/* .base-card-overlay {
+  border-radius: 15px; added
+  align-items: flex-start;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: -5px; commented
+  margin-top: -4px; edited
+  min-height: 164px;
+  padding: 22px;
+  width: 254px;
+} */
+
+.patient-count-overlay {
+  background: linear-gradient(
+    230deg,
+    rgba(51, 226, 243, 1) 10%,
+    rgba(33, 52, 231, 1) 100%
+  );
+  border-radius: 15px; /* added */
+  align-items: flex-start;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: -4px; /* edited */
+  margin-top: -4px; /* edited */
+  min-height: 164px;
+  padding: 22px;
+  width: 254px;
+}
+
+.appointments-overlay {
+  background: linear-gradient(
+    230deg,
+    rgba(51, 226, 243, 1) 10%,
+    rgba(33, 52, 231, 1) 100%
+  );
+  border-radius: 15px; /* added */
+  align-items: flex-start;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: -4px; /* edited */
+  margin-top: -4px; /* edited */
+  min-height: 164px;
+  padding: 22px;
+  width: 254px;
+}
+
+.availablestaff-overlay {
+  background: linear-gradient(
+    230deg,
+    rgba(51, 226, 243, 1) 10%,
+    rgba(33, 52, 231, 1) 100%
+  );
+  border-radius: 15px; /* added */
+  align-items: flex-start;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: -4px; /* edited */
+  margin-top: -4px; /* edited */
+  min-height: 164px;
+  padding: 22px;
+  width: 254px;
+}
+
+.count-number {
+  position: absolute; /* added */
+  bottom: 40px; /* added */
+  color: white;
+  font-family: poppins;
+  font-size: 40px; /* edited */
+  font-weight: 700;
+  letter-spacing: 0;
+  min-height: 41px;
+  mix-blend-mode: normal;
+  width: 88px;
+}
+
+.count-label {
+  position: absolute; /* added */
+  bottom: 20px; /* added */
+  color: white;
+  font-family: poppins;
+  font-size: 13px; /* edited */
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  min-height: 15px;
+  mix-blend-mode: normal;
+}
+
+.card-icon {
+  height: 35px;
+  left: 17px;
+  position: absolute;
+  top: 16px;
+  width: 35px;
+}
+
+.percentage-pill {
+  align-items: flex-start;
+  display: flex;
+  height: 33px;
+  left: 155px;
+  min-width: 78px;
+  position: absolute;
+  top: 102px;
+}
+
+.base-pill-overlap {
+  align-items: center;
+  background-color: #ffffff1f;
+  border: 0.5px solid #ffffff30;
+  border-radius: 40px;
+  display: flex;
+  height: 34px;
+  margin-top: -0.5px;
+  min-width: 77px;
+  padding: 0 3px;
+}
+
+.pill-value {
+  margin-top: 5px; /* added */
+  color: white;
+  font-family: poppins;
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  letter-spacing: 0;
+  min-height: 18px;
+  min-width: 60px; /* edited */
+  mix-blend-mode: normal;
+}
+
+.percentage-arrow-up {
+  margin-top: 4px; /* added */
+  height: 9px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  mix-blend-mode: normal;
+  width: 12px;
+}
+.percentage-arrow-down {
+  /* dynamic change prop */
+  transform: rotate(180deg);
+  margin-top: 4px; /* added */
+  height: 9px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  mix-blend-mode: normal;
+  width: 12px;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:700,500|Roboto:700");
+* {
+  box-sizing: border-box;
+}
+
+.container-center-horizontal {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.container-center-horizontal > * {
+  pointer-events: auto;
+  flex-shrink: 0;
 }
