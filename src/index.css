@@ -172,10 +172,10 @@ code {
   color: white;
   font-family: poppins;
   font-size: var(--font-size-l);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0;
   min-height: 18px;
-  min-width: 60px; /* edited */
+  /* min-width: 60px;  edited */
   mix-blend-mode: normal;
 }
 
