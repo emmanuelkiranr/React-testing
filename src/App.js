@@ -1,6 +1,6 @@
 import React from "react";
-import Appointments from "./Appointments";
-import Availablestaff from "./Availablestaff";
+// import Appointments from "./Appointments";
+// import Availablestaff from "./Availablestaff";
 import Patientcount from "./Patientcount";
 import GlobalStyle from "./theme/globalStyle";
 
