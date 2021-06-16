@@ -9,7 +9,6 @@ import {
 } from "@material-ui/core";
 import Styled from "styled-components";
 import GroupAddIcon from "@material-ui/icons/GroupAdd";
-import { Style } from "@material-ui/icons";
 
 class Basecard extends Component {
   render() {
