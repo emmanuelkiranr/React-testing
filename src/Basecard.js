@@ -6,27 +6,32 @@ import {
   CssBaseline,
   Typography,
   Grid,
+  Box,
 } from "@material-ui/core";
 import Styled from "styled-components";
-import GroupAddIcon from "@material-ui/icons/GroupAdd";
+import data from "./data";
 
 class Basecard extends Component {
   render() {
     return (
       <>
         <CssBaseline />
-        <Container>
+        <Container minWidth="sm">
           <Grid>
-            <Template>
-              <Icon fontSize="large" />
-              <CardContent>
-                <Count variant="h2">6234</Count>
-                <Label variant="h6">Patient count</Label>
-                <Pill>
-                  <Percentage>+1.07%</Percentage>
-                </Pill>
-              </CardContent>
-            </Template>
+            {data.map(function (info) {
+              return (
+                <Template>
+                  <Icon fontSize="large">{info.icon}</Icon>
+                  <CardContent>
+                    <Count variant="h2">{info.value}</Count>
+                    <Label variant="h6">{info.label}</Label>
+                    <Pill>
+                      <Percentage>{info.percentage}</Percentage>
+                    </Pill>
+                  </CardContent>
+                </Template>
+              );
+            })}
           </Grid>
         </Container>
       </>
@@ -36,7 +41,7 @@ class Basecard extends Component {
 
 const Template = Styled(Card)`
   position: relative;
-  top: 10px;  /*added*/
+  margin: 20px;
   height: 150px;
   width: 250px;
   border-radius: 15px;
@@ -44,26 +49,33 @@ const Template = Styled(Card)`
   /* box-shadow: '0px 7px 29px 0px rgba(100, 100, 111, 0.2)'; */
 `;
 
-const Icon = Styled(GroupAddIcon)`
+const Icon = Styled(Box)`
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 20px;
+  height: 35px;
+  width: 35px;
+  left: 20px;
+  border-radius:4px;
+  padding:5px;
+  /* background: linear-gradient(30deg, rgba(33,52,231,1) 10%, rgba(51,226,243,1) 100%); */
   color:white;
 `;
 
 const Count = Styled(Typography)`
   position: absolute;
-  bottom: 40px;
+  bottom: 35px;
   min-width: 130px;
   color: white;
-  font-size:40px;
-  font-weight:900;
+  font-family: poppins;
+  font-size:35px;
+  font-weight:500;
 `;
 
 const Label = Styled(Typography)`
   position: absolute;
   bottom: 20px;
   color: white;
+  font-family: poppins;
   font-size:12px;
   letter-spacing: 0.4px;
 `;
@@ -83,6 +95,7 @@ const Pill = Styled(Card)`
 const Percentage = Styled(Typography)`
   margin-top: 3px;
   text-align: center; 
+  font-family: poppins;
 `;
 
 export default Basecard;
